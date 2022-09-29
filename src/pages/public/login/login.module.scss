@@ -1,0 +1,47 @@
+@mixin background {
+   background-image: url(https://cdnb.artstation.com/p/assets/images/images/001/240/391/large/khyzyl-saleem-kewnmerifinal1.jpg?1443926678);
+   background-size: cover;
+   background-position: center;
+}
+
+.root {
+   @include background;
+   height: 100vh;
+
+   .form-wrapper {
+      height: 100vh;
+      width: 100%;
+      max-width: 500px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      .form {
+         min-height: 80vh;
+         width: 100%;
+         max-width: 380px;
+         padding: 20px;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         svg {
+            height: 20px;
+         }
+         .link {
+            color: #2196f3;
+            cursor: pointer;
+         }
+      }
+   }
+   .content-wrapper {
+      grid-column: 2 / 3;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10rem;
+   }
+}

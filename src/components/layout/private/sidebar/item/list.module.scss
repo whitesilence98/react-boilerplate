@@ -1,0 +1,35 @@
+.menu {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+
+   &__item,
+   &__header {
+      height: 60px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+         background-color: var(--hover-menu-bg);
+      }
+   }
+
+   &__header > .title {
+      color: var(--inactive-color);
+      font-size: 1.5rem;
+      // font-weight: 700;
+   }
+}
+
+.icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+   width: 80px;
+   img {
+      height: 30px;
+      width: 30px;
+   }
+}

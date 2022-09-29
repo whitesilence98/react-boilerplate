@@ -1,0 +1,31 @@
+{
+   "compilerOptions": {
+      "baseUrl": "./src/",
+      "lib": ["es5", "es6", "dom", "es2017"],
+      "jsx": "react",
+      "paths": {
+         "@context": ["context"],
+         "@context/*": ["context/*"],
+         "@constants": ["constants"],
+         "@constants/*": ["constants/*"],
+         "@pages": ["pages"],
+         "@pages/*": ["pages/*"],
+         "@styles": ["styles"],
+         "@styles/*": ["styles/*"],
+         "@components": ["components"],
+         "@components/*": ["components/*"],
+         "@router": ["router"],
+         "@router/*": ["router/*"],
+         "@services": ["services"],
+         "@services/*": ["services/*"],
+         "@assets": ["assets"],
+         "@assets/*": ["assets/*"],
+         "@my-store": ["store"],
+         "@my-store/*": ["store/*"],
+         "@utils": ["utils"],
+         "@utils/*": ["utils/*"],
+         "@models": ["models"],
+         "@models/*": ["models/*"]
+      }
+   }
+}

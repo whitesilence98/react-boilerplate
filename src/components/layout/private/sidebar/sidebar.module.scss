@@ -1,0 +1,43 @@
+$width: 300px;
+$collapseWidth: auto;
+
+.sidebar {
+   width: $width;
+   z-index: 1000;
+   // background: var(--theme-bg-color);
+   background: #aaa;
+   // margin: 2rem;
+   // box-shadow: 0 1rem 2rem #00000030;
+   // border-radius: 2rem;
+   width: $width;
+   transition: width 0.2s ease;
+   display: flex;
+   flex-direction: column;
+   overflow: scroll;
+
+   &--collapse {
+      width: $collapseWidth;
+   }
+
+   .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 80px;
+      img {
+         height: 50px;
+         width: 50px;
+      }
+   }
+
+   .logo {
+      height: 60px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+   }
+}

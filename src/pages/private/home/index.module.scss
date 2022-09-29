@@ -1,0 +1,12 @@
+.root {
+   color: var(--theme-color);
+   // transition: ease-in-out 0.5s all;
+   // min-height: 100vh;
+   .filter {
+      align-items: center;
+      margin: 3rem 1.2rem;
+      .input-wrapper {
+         max-width: 400px;
+      }
+   }
+}

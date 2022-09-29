@@ -1,0 +1,32 @@
+$width: 300px;
+$collapseWidth: 100px;
+
+.root {
+   display: flex;
+   height: 100vh;
+   .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .content {
+         margin: auto;
+         max-width: 1280px;
+         width: 100%;
+         flex: 1;
+         overflow: scroll;
+      }
+   }
+   .video-bg {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      video {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}

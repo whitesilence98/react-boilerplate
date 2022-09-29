@@ -1,0 +1,97 @@
+$border-radius: 2rem;
+$main-outline: #2196f3;
+$gray: #eee;
+$error: red;
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.root {
+   position: relative;
+
+   .error-text {
+      // position: absolute;
+      animation: fadeIn 0.3s;
+      font-size: 1.4rem;
+      color: $error;
+      // top: 0;
+   }
+   .input {
+      position: relative;
+      border-radius: $border-radius;
+
+      &__icon {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 2rem;
+         font-size: 2rem;
+         color: #000;
+         margin-left: 2px;
+         margin-right: 2px;
+         display: flex;
+         align-items: center;
+         svg {
+            height: 2rem;
+            width: 2rem;
+            color: #111;
+         }
+      }
+
+      &__text:focus ~ &__icon svg {
+         color: $main-outline;
+         // color: $error;
+      }
+
+      &__text {
+         box-sizing: border-box;
+         font-family: inherit;
+         font-size: 1.8rem;
+         padding: 1.2rem 2rem;
+         border: none;
+         flex: 1;
+         border-radius: $border-radius;
+         width: 100%;
+
+         &:focus {
+            outline: none;
+            border: 2px solid $main-outline;
+         }
+
+         &--with-icon {
+            padding-right: 5rem;
+         }
+
+         &--contained {
+            background-color: $gray;
+            color: #000;
+            border: 2px solid $gray;
+         }
+         &--outlined {
+            background-color: transparent;
+            border: 2px solid $main-outline;
+            color: var(--theme-color);
+         }
+
+         &--focused {
+            border: 2px solid $main-outline;
+            &:focus {
+               border: 2px solid $main-outline;
+            }
+         }
+
+         &--error {
+            border: 2px solid $error;
+            &:focus {
+               border: 2px solid $error;
+            }
+         }
+      }
+   }
+}

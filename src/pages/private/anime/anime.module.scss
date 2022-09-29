@@ -1,0 +1,24 @@
+.root {
+   color: var(--theme-color);
+   // transition: ease-in-out 0.5s all;
+   // min-height: 100vh;
+   .filter {
+      display: flex;
+      align-items: center;
+      margin: 3rem 1.2rem;
+      gap: 1.2rem;
+      .input-wrapper {
+         max-width: 400px;
+      }
+   }
+}
+
+@keyframes fadeInRight {
+   from {
+      opacity: 0;
+      transform: translateX(300px);
+   }
+   to {
+      opacity: 1;
+   }
+}
