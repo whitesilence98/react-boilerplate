@@ -1,10 +1,9 @@
-import * as React from 'react';
-import classNames from 'classnames';
+import * as React from "react";
+import classNames from "classnames";
 
-import styles from './image.module.scss';
+import styles from "./image.module.scss";
 
-export const FALLBACK_IMAGE =
-   'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/legacy-fre-image-placeholder-1642515924.png';
+export const FALLBACK_IMAGE = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/legacy-fre-image-placeholder-1642515924.png";
 
 interface IImage extends React.ImgHTMLAttributes<HTMLImageElement> {
    src: string;
@@ -14,7 +13,7 @@ interface IImage extends React.ImgHTMLAttributes<HTMLImageElement> {
    [key: string]: any;
 }
 
-const CustomImage = ({src, alt = '', fallbackSrc = null, className, ...props}: IImage) => {
+const CustomImage = ({src, alt = "", fallbackSrc = null, className, ...props}: IImage) => {
    const ref = React.useRef<HTMLImageElement | null>(null);
 
    const _onError = () => {
@@ -24,16 +23,7 @@ const CustomImage = ({src, alt = '', fallbackSrc = null, className, ...props}: I
       }
    };
 
-   return (
-      <img
-         ref={ref}
-         alt={alt}
-         src={src}
-         onError={_onError}
-         className={classNames(styles.image, className)}
-         {...props}
-      />
-   );
+   return <img ref={ref} alt={alt} src={src} onError={_onError} className={classNames(styles.image, className)} {...props} />;
 };
 
 export {CustomImage as Image};

@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
-import {motion} from "framer-motion";
+// import {motion} from "framer-motion";
 import _get from "lodash/get";
 
 import styles from "./text-input.module.scss";
@@ -70,7 +70,7 @@ const CustomTextInput = React.forwardRef(
                         [styles["input__text--error"]]: error,
                         [styles["input__text--focused"]]: focused,
                      },
-                     classNames,
+                     className,
                   )}
                   {...props}
                />

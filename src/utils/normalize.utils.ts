@@ -19,7 +19,7 @@ export const normalizeError = (errors: any) => {
 
    if (isObject(errors)) {
       const error = get(errors, "response.data.errors", {});
-      if (error.base) return error.base;
+      if (get(error, "base", "")) return get(error, "base", "");
 
       const cloned: {[key: string]: any} = cloneDeep(errors);
       const messages = [];
